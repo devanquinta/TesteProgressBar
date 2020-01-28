@@ -1,0 +1,662 @@
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="estilo.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js">
+
+	</script>
+	<script type="text/javascript">
+		(function(){
+    emailjs.init("user_qceEfEnVdgQKZo6PSLsmD");
+   })();
+	</script>
+
+
+	<!------------------------------------------------------------------------------------------------------->
+
+	<!------------------------------------------------------------------------------------------------------->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation-emails/2.2.1/foundation-emails.min.css"></script>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body onload="loadSound(); sound();" ;>
+	<!--------------------------------->
+<canvas id="progress-bar"></canvas>
+
+	<script>
+		var soundID = "bonus";
+		 function loadSound() {
+     createjs.Sound.registerSound("som/sonic-ring.mp3", soundID);
+    }
+		/*loadSound();*/
+
+		function playSound() {
+			createjs.Sound.play(soundID);
+		}
+		/*playSound();*/
+	</script>
+	<script>
+		var som = "falha";
+		 function sound() {
+     createjs.Sound.registerSound("som/NFF-usb-no.wav", som);
+    }
+	
+		function playSound2() {
+			createjs.Sound.play(som);
+		}
+	</script>
+
+	<div class="eletro">
+		<img src="img/logotipo.png" class="img"/>
+	  </div>
+	
+		<span class="pense">
+		 <img src="img/PenseRisco_IdentVisualFundoBranco.png" class="img3"/>
+		</span>
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+<div class="canvas-wrap" id="barra">
+  <canvas id="canvas"></canvas>
+  <span id="procent"></span>
+</div>
+<div id="c">10 %</div>
+<!------------------------------------------------------------------------------------------------------->
+			<div id="pagA">
+				<div id="capa">
+          <img id="img1" src="img/usinas.jpg">
+					<h1 class="textoInic">Aprendendo sobre Riscos<br>Corporativos</h1>
+          <br>
+          <h1 class="textMot">Faça o nosso Quiz!</h1>
+				</div>
+     		<button class="btn3">Start Quiz</button>
+     	</div><!--//pagA-->
+			<div id="pag0">
+
+			<div id="pontos" class="pontos"></div>
+				<!--Paginas dos slides - pag1, pag2, pag3 etc-->
+				<h2 class="qst">1 -  O que é	Gestão de Riscos Corporativo? </h2>
+				<ul class="simpleList">
+					  <li class="simpleListAnswer ">
+						<span class="fa fa-square-o"></span>
+              <span class="simpleListText"> É um processo de controles para a certificação SOX.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <!-- lib bootstrap -->
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">É um processo contínuo alinhado à estratégia, a política da empresa e a Governança. </span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Normas e procedimentos que precisam ser cumpridos. </span>
+            </li>
+						<li class="simpleListAnswer nao" id="n1">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns! <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo"><strong>A gestão de riscos</strong>, como definida no Decreto 9.203/2017, é um processo de natureza contínua, estabelecido, direcionado e monitorado pela alta administração, que contempla atividades de identificar, avaliar e gerenciar potenciais eventos (riscos) que possam afetar a organização, destinado a fornecer segurança razoável quanto à realização de seus objetivos (Art. 2º, IV).</p>
+								<input type="button" value="Next" onClick="document.getElementById('pag1').style.display = 'block';  Cont();  Flag(); Time1();" class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Desculpe. <i class="far fa-frown"></i></h3>
+              </div>
+							
+              <!--end answer header-->
+              <div class="answerText">
+							
+                <p id="sorry">
+									<strong>A gestão de riscos</strong>, como definida no Decreto 9.203/2017, é um processo de natureza contínua, estabelecido, direcionado e monitorado pela alta administração, que contempla atividades de identificar, avaliar e gerenciar potenciais eventos (riscos) que possam afetar a organização, destinado a fornecer segurança razoável quanto à realização de seus objetivos (Art. 2º, IV).</p>
+							</div>
+              	<input type="button" value="Next" onClick="document.getElementById('pag1').style.display = 'block';  Cont();  Flag(); Time1();" class="btn"></input>
+						  <!-------- Se guiar por aqui  -----------------------------------##################------->
+
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------->
+        <div id="pag1"><!--Paginas dos slides - pag1, pag2, pag3 ... até a pg10 etc-->
+					<div id="pontos1" class="pontos"></div>
+				  <h2 class="qst">2 - Qual a área da empresa é responsável pela Gestão de Riscos Corporativos na Eletronuclear?</h2>
+          <ul class="simpleList">
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">DEC.P</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">DGC.P</span>
+            </li>
+            <li class="simpleListAnswer " >
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">SG.P</span>
+            </li>
+						<li class="simpleListAnswer nao" id="n2">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">O de <strong>Gestão de Riscos e Controles Internos – DGC.P</strong> á subordinado a Superintendência de Governança, Gestão de Riscos e Conformidade ligada a Presidência em atenção à Lei 13.303/2016 e ao Decreto 8945/2016.</p>
+              </div>
+              <!--end asnwerText-->
+              <input type="button" value="Next" onClick="document.getElementById('pag2').style.display = 'block'; Cont(); Flag(); Time2()"  class="btn"></input>
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Desculpe. <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">O de <strong>Gestão de Riscos e Controles Internos – DGC.P</strong> á subordinado a Superintendência de Governança, Gestão de Riscos e Conformidade ligada a Presidência em atenção à Lei 13.303/2016 e ao Decreto 8945/2016.</p>
+                 <input type="button" value="Next" onClick="document.getElementById('pag2').style.display = 'block'; Cont(); Flag(); Time2()"  class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!----------------------------------------------->
+        <!------------------------------------------------->
+        <div id="pag2">
+					<div id="pontos2" class="pontos"></div>
+					<h2 class="qst">3 - Qual o objetivo da Gestão de Riscos Corporativos?</h2>
+					<ul class="simpleList"><!-------Atenção------>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Criar resposta ao risco materializado.</span>
+            </li>
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Gerar documentação para atender a legislação.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Melhoria dos processos da empresa e um elemento essencial para a boa governança. </span>
+            </li>
+						<li class="simpleListAnswer nao" id="n3">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">A <strong>Gestão de Riscos Corporativos</strong> tem como objetivo a empresa a alcançar os objetivos estratégicos, reduzindo os riscos a níveis aceitáveis; assegurar que os responsáveis pela tomada de decisão, em todos os níveis do órgão ou entidade, tenham acesso tempestivo a informações suficientes quanto aos riscos aos quais está exposta a empresa e agregar valor à organização por meio da melhoria dos processos de tomada de decisão e do tratamento adequado dos riscos e dos impactos negativos decorrentes de sua materialização. (IN MP/CGU nº01/2016</p>
+                <input type="button" value="Next" onClick="document.getElementById('pag3').style.display = 'block';Cont(); Flag(); Time3()" class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">A <strong>Gestão de Riscos Corporativos</strong> tem como objetivo a empresa a alcançar os objetivos estratégicos, reduzindo os riscos a níveis aceitáveis; assegurar que os responsáveis pela tomada de decisão, em todos os níveis do órgão ou entidade, tenham acesso tempestivo a informações suficientes quanto aos riscos aos quais está exposta a empresa e agregar valor à organização por meio da melhoria dos processos de tomada de decisão e do tratamento adequado dos riscos e dos impactos negativos decorrentes de sua materialização. (IN MP/CGU nº01/2016</p>
+                  <input type="button" value="Next" onClick="document.getElementById('pag3').style.display = 'block'; Cont(); Flag(); Time3()" class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag3">
+					<div id="pontos3" class="pontos"></div>
+          <h2 class="qst">4 - A análise periódica dos riscos corporativos é parte dos parâmetros para avaliação do Programa de Integridade?</h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Não, a análise periódica dos riscos corporativos é um instrumento de reporte.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Sim, está inserido nos aspectos regulatórios da Legislação Anticorrupção.</span>
+            </li>
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Sim, atua como órgão de auditoria nos processos da empresa.</span>
+            </li>
+						<li class="simpleListAnswer" id="n4">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns! <i class="far fa-grin"></i></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo"><strong>A análise periódica dos riscos</strong> é um dos parâmetros para avaliação de um programa de integridade, segundo o Decreto nº 8.420/2015.</p>
+                <input type="button" value="Next" onClick="document.getElementById('pag4').style.display = 'block';Cont(); Flag(); Time4();"  class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry"><strong>A análise periódica dos riscos</strong> é um dos parâmetros para avaliação de um programa de integridade, segundo o Decreto nº 8.420/2015.</p>
+                <input type="button" value="Next" onClick="document.getElementById('pag4').style.display = 'block';Cont(); Flag(); Time4();"  class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag4">
+					<div id="pontos4" class="pontos"></div>
+          <h2 class="qst">5 -	A Gestão de Riscos está inserida no Programa 5 dimensões das empresas do grupo Eletrobras? </h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Sim, acompanhamento contínuo da efetividade do programa, monitorando e implementando medidas e remediações.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Sim, elabora e estrutura e implanta políticas e procedimentos do programa de integridade.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+								 <span class="fa fa-square-o"></span>
+								<span class="simpleListText">Sim, consiste na identificação, avaliação, tratamento e monitoramento dos fatores que podem ocasionar a materialização do risco de “Fraude e Corrupção” nas Empresas Eletrobras, o qual foi priorizado pela Alta Administração dentro da Matriz de Riscos Corporativos das Empresas Eletrobras.</span>
+            </li>
+						<li class="simpleListAnswer" id="n5">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!<i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">A análise periódica de risco é a Dimensão 2 do Programa 5 Dimensões Eletrobras.</p>
+              </div>
+							 <input type="button" value="Next" onClick="document.getElementById('pag5').style.display = 'block';Cont(); Flag(); Time5();"  class="btn"></input>
+
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">A análise periódica de risco é a Dimensão 2 do Programa 5 Dimensões Eletrobras.</p>
+                <input type="button" value="Next" onClick="document.getElementById('pag5').style.display = 'block';Cont(); Flag(); Time5();"
+								class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+
+
+        <!------------------------------------------------------------->
+        <div id="pag5">
+					<div id="pontos5"  class="pontos"></div>
+          <h2 class="qst">6 - O Gestor de cada área da empresa atua na Gestão do Risco Corporativo? </h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Sim, a gestão operacional serve como a primeira linha de defesa, porque os controles são desenvolvidos como sistemas e processos sob sua orientação e responsabilidade.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Sim, a gestão operacional serve com primeira linha de defesa atuando de modo a criar controles para processos sem implementar as ações corretivas para resolver deficiências.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Não, a gestão operacional não é responsável por criar controles.</span>
+            </li>
+            <li class="simpleListAnswer" id="n6">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo"><strong>1ª LINHA DE DEFESA: GESTÃO OPERACIONAL</strong>
+										A gerência operacional é responsável por identificar, avaliar, controlar e mitigar os riscos operacionais e por manter os controles internos eficazes, guiando o desenvolvimento e a implementação de políticas e procedimentos internos, garantindo que as atividades estejam de acordo com as metas e objetivos. (Declaração de Posicionamento do IIA, The Institute of Internal Auditores.</p>
+                <input type="button" value="Next" onClick="document.getElementById('pag6').style.display = 'block';Cont(); Flag(); Time6();"
+								class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry"><strong>1ª LINHA DE DEFESA: GESTÃO OPERACIONAL</strong>
+									A gerência operacional é responsável por identificar, avaliar, controlar e mitigar os riscos operacionais e por manter os controles internos eficazes, guiando o desenvolvimento e a implementação de políticas e procedimentos internos, garantindo que as atividades estejam de acordo com as metas e objetivos. (Declaração de Posicionamento do IIA, The Institute of Internal Auditors)
+                </p>
+               <input type="button" value="Next" onClick="document.getElementById('pag6').style.display = 'block';Cont(); Flag(); Time6();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag6">
+					<div id="pontos6" class="pontos"></div>
+          <h2 class="qst">7 - Gestão de Riscos Corporativa atua como segunda linha de defesa? </h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não, a Gestão de riscos faz o mapeamento dos riscos para atender a uma determinação legal.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Sim, a Gestão de Riscos atua como segunda linha de defesa no tocante no gerenciamento de riscos e controles.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Sim, a Gestão de riscos realiza auditorias nas áreas </span>
+            </li>
+						<li class="simpleListAnswer" id="n7">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">2ª LINHA DE DEFESA: FUNÇÕES DE GERENCIAMENTO DE RISCOS E CONFORMIDADE
+                A Gestão de Risco atua como segunda linha de defesa, coordenando as atividades de gestão de riscos, ajudando a desenvolver controles e/ou monitorar riscos e controles da primeira linha de defesa. (Declaração de Posicionamento do IIA, The Institute of Internal Auditors)
+                </p>
+               <input type="button" value="Next" onClick="document.getElementById('pag7').style.display = 'block';Cont(); Flag(); Time7();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.   <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">2ª LINHA DE DEFESA: FUNÇÕES DE GERENCIAMENTO DE RISCOS E CONFORMIDADE
+                A Gestão de Risco atua como segunda linha de defesa, coordenando as atividades de gestão de riscos, ajudando a desenvolver controles e/ou monitorar riscos e controles da primeira linha de defesa. (Declaração de Posicionamento do IIA, The Institute of Internal Auditors)
+                </p>
+               <input type="button" value="Next" onClick="document.getElementById('pag7').style.display = 'block';Cont(); Flag(); Time7();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag7">
+					<div id="pontos7"  class="pontos"></div>
+          <h2 class="qst">8- A Auditoria Interna atua como terceira linha de defesa? </h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não, a Auditoria Interna é responsável por desenvolver controles para as áreas da empresa.</span>
+            </li>
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Sim, a Auditoria gerencia e tem propriedade sobre os riscos permitindo avaliações independentes.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">	Sim, os auditores internos fornecem ao órgão de governança e à alta administração avaliações abrangentes baseadas no maior nível de independência e objetividade dentro da organização </span>
+            </li>
+						<li class="simpleListAnswer" id="n8">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo"><strong>3ª LINHA DE DEFESA: AUDITORIA INTERNA</strong>
+										Os auditores internos fornecem ao órgão de governança e à alta administração avaliações abrangentes baseadas no maior nível de independência e objetividade dentro da organização. A auditoria interna provê avaliações sobre a eficácia da governança, do gerenciamento de riscos e dos controles internos, incluindo a forma como a primeira e a segunda linhas de defesa alcançam os objetivos de gerenciamento de riscos e controle.
+										(Declaração de Posicionamento do IIA, The Institute of Internal Auditors)
+                </p>
+               <input type="button" value="Next" onClick="document.getElementById('pag8').style.display = 'block';Cont(); Flag(); Time8();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry"><strong>3ª LINHA DE DEFESA: AUDITORIA INTERNA</strong>
+									Os auditores internos fornecem ao órgão de governança e à alta administração avaliações abrangentes baseadas no maior nível de independência e objetividade dentro da organização. A auditoria interna provê avaliações sobre a eficácia da governança, do gerenciamento de riscos e dos controles internos, incluindo a forma como a primeira e a segunda linhas de defesa alcançam os objetivos de gerenciamento de riscos e controle.
+									(Declaração de Posicionamento do IIA, The Institute of Internal Auditors)
+                </p>
+                 <input type="button" value="Next" onClick="document.getElementById('pag8').style.display = 'block';Cont(); Flag(); Time8();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag8">
+					<div id="pontos8"  class="pontos"></div>
+          <h2 class="qst">9- Qual o papel do Comitê de Riscos e Controles Internos?</h2>
+          <ul class="simpleList teste">
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Apoiar e validar os trabalhos realizados pelo Departamento de Gestão de Riscos e Controles Internos (DGC.P). É composto por representantes de cada diretoria de forma a alinhar a estratégia da empresa com o processo de gestão de riscos.</span>
+            </li>
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Deliberar sobre os riscos operacionais da empresa.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">São responsáveis pelos riscos corporativos. </span>
+            </li>
+						<li class="simpleListAnswer" id="n9">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">Apoiar e validar os trabalhos realizados pelo Departamento de Gestão de Riscos e Controles Internos (DGC.P), promovendo o alinhamento entre os objetivos estratégicos da Diretoria Executiva com os objetivos operacionais no processo de gestão integrada de riscos. ( Regimento Interno, 01/05/2018).
+                </p>
+                 <input type="button" value="Next" onClick="document.getElementById('pag9').style.display = 'block';Cont(); Flag(); Time9();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.   <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">Apoiar e validar os trabalhos realizados pelo Departamento de Gestão de Riscos e Controles Internos (DGC.P), promovendo o alinhamento entre os objetivos estratégicos da Diretoria Executiva com os objetivos operacionais no processo de gestão integrada de riscos. ( Regimento Interno, 01/05/2018).
+                </p>
+                 <input type="button" value="Next" onClick="document.getElementById('pag9').style.display = 'block';Cont(); Flag(); Time9();"
+							 class="btn"></input>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+          <!--end answerReveal-->
+        </div>
+        <!------------------------------------------------------------->
+        <div id="pag9">
+					 <div id="pontos9"  class="pontos"></div>
+          <h2 class="qst">10- O que é apetite a risco?</h2>
+          <ul class="simpleList absolute">
+
+            <li class="simpleListAnswer correct">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Limite de exposição aos riscos que a empresa está disposta a aceitar para atingir seus objetivos estratégicos e criar valor para os acionistas.</span>
+            </li>
+            <li class="simpleListAnswer ">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Grau que mede a agressividade da empresa em relação aos objetivos estratégicos.</span>
+            </li>
+            <li class="simpleListAnswer">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Ferramenta de controle da Certificação SOX</span>
+            </li>
+						<li class="simpleListAnswer" id="n10">
+              <span class="fa fa-square-o"></span>
+              <span class="simpleListText">Não sei.</span>
+            </li>
+          </ul>
+          <!--end simpleList-->
+          <div class="answerReveal">
+            <div class="quizzAnswerC">
+              <div class="answerHeader">
+                <h3 class="correctMessage"><i class="fa fa-check-circle"></i>Parabéns!  <i class="far fa-grin"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="bravo">Limite de exposição aos riscos que a empresa está disposta a aceitar para atingir seus objetivos estratégicos e criar valor para os acionistas. ( Política de Gestão de Riscos das Empresas Eletrobras, versão 4.0, 2019)
+                </p>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerC-->
+            <div class="quizzAnswerF">
+              <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Desculpe.  <i class="far fa-frown"></i></h3>
+              </div>
+              <!--end answer header-->
+              <div class="answerText">
+                <p id="sorry">Limite de exposição aos riscos que a empresa está disposta a aceitar para atingir seus objetivos estratégicos e criar valor para os acionistas. ( Política de Gestão de Riscos das Empresas Eletrobras, versão 4.0, 2019)
+                </p>
+              </div>
+              <!--end asnwerText-->
+            </div>
+            <!--end quizzAnswerF-->
+          </div>
+				</div> <!--final-->
+        <!--end answerReveal-->
+				</div><!--fecha a pag10-->
+				<div id="final">
+          <div class="finalResult">
+            <h4>Quanto você acha que sabe sobre risco ?</h4>
+            <div class="resultContainer"></div>
+            <div id="halfText"></div>
+          </div>
+          <!--end finalResult-->
+				</div>
+
+
+		 <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+		 <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>		
+		 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.1.0/simplebar.min.js"></script>
+		 <script src="ion.sound.js"></script>
+      <!----------------------------------------------------------------------------------------->
+
+
+			<link rel="stylesheet" href="cssProgress.css">
+
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+			<!--<script src="jquery-1.11.2.js"></script>-->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="script.js"></script>
+      
+  </body>
+</html>
